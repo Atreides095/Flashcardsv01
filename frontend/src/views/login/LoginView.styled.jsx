@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const StyledBackground = styled.div`
     background-color: var(--grey-light);
     height: 100vh;
+    width: 100vw;
     display: grid;
     place-content: center;
 `;

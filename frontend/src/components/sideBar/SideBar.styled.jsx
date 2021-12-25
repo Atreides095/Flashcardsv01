@@ -3,7 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { NavLink } from 'react-router-dom';
 
 export const StyledSideBar = styled.div`
-    background: var(--grad);
+    background: ${({ expanded }) =>
+        expanded ? 'var(--grad)' : 'var(--black)'};
     position: relative;
     display: flex;
     flex-direction: column;
@@ -11,8 +12,9 @@ export const StyledSideBar = styled.div`
     height: 100vh;
     padding-inline: 1rem;
     padding-block: 2rem;
-    margin-right: 1rem;
-    transition: width 0.5s ease-out;
+    border-right: 0.2rem solid var(--black);
+    transition: width 0.5s ease-out, background 0.5s ease-out;
+    z-index: 999;
 `;
 
 export const Wrapper = styled.div`
@@ -33,7 +35,7 @@ export const ExpandBtn = styled.div`
     right: 0;
     transform: translateX(50%)
         ${({ expanded }) => (expanded ? '' : 'rotate(180deg)')};
-    background-color: var(--grey-light);
+    background-color: var(--white);
     border-radius: 50%;
     transition: transform 0.5s ease-out;
     cursor: pointer;
@@ -100,9 +102,11 @@ export const CollectionItems = styled.div`
     display: flex;
     flex-direction: column;
     gap: 0.3rem;
-    height: ${({ expanded }) => (expanded ? '' : 0)};
-    max-height: 10rem;
+    height: auto;
+    max-height: ${({ expanded }) => (expanded ? '10rem' : 0)};
+    /* max-height: 10rem; */
     overflow-y: auto;
+    transition: max-height 0.3s ease-out;
 
     /* width */
     ::-webkit-scrollbar {

@@ -30,7 +30,7 @@ export const StyledField = styled.div`
         border-radius: 2px;
         padding-inline: 0.5rem;
         outline: none;
-        color: var(--green-light);
+        color: var(--grey-light);
     }
 
     & > label {

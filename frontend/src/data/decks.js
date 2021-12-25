@@ -4,6 +4,7 @@ export const decks = [
         name: 'japanese colors',
         picture: '',
         user: 'atreides095',
+        tags: ['japanese', 'colors', 'beginner'],
         cards: [
             {
                 _id: '1-1',
@@ -33,6 +34,7 @@ export const decks = [
         name: 'spanish colors',
         picture: '',
         user: 'atreides095',
+        tags: ['japanese', 'colors', 'beginner'],
         cards: [
             {
                 _id: '2-1',
@@ -62,6 +64,7 @@ export const decks = [
         name: 'spanish days of the week',
         picture: '',
         user: 'atreides095',
+        tags: ['japanese', 'colors', 'beginner'],
         cards: [
             {
                 _id: '3-1',
