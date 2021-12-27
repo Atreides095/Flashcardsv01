@@ -13,7 +13,7 @@ export const GlobalStyle = createGlobalStyle`
         --white: #fff;
         --grad: linear-gradient(0deg, rgba(31,40,51,1) 0%, rgba(11,12,16,1) 100%);
 
-        font-size: 18px;
+        font-size: 16px;
     }
 
     @media (min-width: 2000px) {

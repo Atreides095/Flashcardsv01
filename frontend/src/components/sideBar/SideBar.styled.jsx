@@ -3,16 +3,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { NavLink } from 'react-router-dom';
 
 export const StyledSideBar = styled.div`
-    background: ${({ expanded }) =>
-        expanded ? 'var(--grad)' : 'var(--black)'};
+    background: var(--grad);
     position: relative;
     display: flex;
     flex-direction: column;
-    width: ${({ expanded }) => (expanded ? '15rem' : '3rem')};
+    width: ${({ expanded }) => (expanded ? '15rem' : '1.5rem')};
     height: 100vh;
     padding-inline: 1rem;
     padding-block: 2rem;
-    border-right: 0.2rem solid var(--black);
+    /* border-right: 0.2rem solid var(--black); */
     transition: width 0.5s ease-out, background 0.5s ease-out;
     z-index: 999;
 `;
@@ -56,7 +55,7 @@ export const BarBtn = styled.button`
     border: none;
     font-size: 1rem;
     color: var(--green-light);
-    transition: color 0.3s ease-out, background-color 0.3s ease-out;
+    transition: all 0.3s ease-out;
     border-radius: 4px;
 
     &:hover {
@@ -77,14 +76,14 @@ export const Profile = styled.div`
 
     h3 {
         font-size: 1.2rem;
-        color: var(--pink);
+        color: var(--green-light);
     }
 `;
 
 export const ProfilePicture = styled.img`
-    height: 4.5rem;
-    width: 4.5rem;
-    border-radius: 50%;
+    height: 4rem;
+    // width: 3.5rem;
+    // border-radius: 50%;
 `;
 
 // Collection Area //

@@ -8,7 +8,7 @@ const Collection = () => {
 
     return (
         <StyledCollectionArea>
-            <ListBox dark title="My Decks">
+            <ListBox title="My Decks">
                 {decks.map((deck) => (
                     <DeckItem
                         dark

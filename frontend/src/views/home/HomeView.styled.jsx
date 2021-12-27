@@ -5,6 +5,6 @@ export const MainLayout = styled.div`
     display: flex;
     flex-direction: column;
     background-color: var(--grey-light);
-    max-width: 60rem;
+    /* max-width: 60rem; */
     margin-inline: auto;
 `;

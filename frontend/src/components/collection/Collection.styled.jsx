@@ -36,12 +36,13 @@ export const DeckItem = styled.p`
     padding-block: 0.3rem;
     transition: color 0.1s ease-out, background-color 0.3s ease-out;
     background-color: ${({ active, dark }) =>
-        active && dark ? 'var(--grey-light)' : 'var(--grey-dark)'};
-    color: ${({ active, dark }) =>
         active && dark ? 'var(--grey-dark)' : 'var(--grey-light)'};
+    color: ${({ active, dark }) =>
+        active && dark ? 'var(--grey-light)' : 'var(--grey-dark)'};
 
     &:hover {
-        color: ${({ active }) => (active ? '' : 'var(--pink)')};
+        /* color: ${({ active }) => (active ? '' : 'var(--black)')}; */
+        filter: brightness(0.95);
     }
 `;
 
@@ -51,7 +52,7 @@ export const CardItem = styled.div`
     padding-block: 0.3rem;
     width: 100%;
     text-align: left;
-    cursor: pointer;
+    /* cursor: pointer; */
     transition: color 0.1s ease-out, background-color 0.3s ease-out;
     overflow-x: hidden;
     justify-content: space-between;
@@ -70,13 +71,14 @@ export const CardItem = styled.div`
 `;
 
 export const BoxButton = styled.button`
-    top: 0;
-    right: 0;
     /* background-color: ${({ dark }) =>
         dark ? 'var(--grey-dark)' : 'var(--grey-light)'}; */
-    background-color: ${({ dark }) =>
-        dark ? 'var(--grey-light)' : 'var(--grey-dark)'};
-    color: ${({ dark }) => (dark ? 'var(--grey-dark)' : 'var(--grey-light)')};
+    /* background-color: ${({ dark }) =>
+        dark ? 'var(--grey-light)' : 'var(--grey-dark)'}; */
+    background-color: transparent;
+    /* color: ${({ dark }) =>
+        dark ? 'var(--grey-dark)' : 'var(--grey-light)'}; */
+    color: var(--grey-dark);
     height: 1.6rem;
     width: 1.6rem;
     border-radius: 50%;

@@ -26,7 +26,7 @@ export const DeckDetails = styled.div`
 
 export const StyledMidbar = styled.div`
     background-color: var(--black);
-    height: 2rem;
+    height: 2px;
     width: 100%;
     bottom: 0;
 `;
